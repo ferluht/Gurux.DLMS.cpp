@@ -32,7 +32,7 @@
 # Full text may be retrieved at http://www.gnu.org/licenses/gpl-2.0.txt
 #---------------------------------------------------------------------------
 # Generate STATIC library.
-TARGET   = libgurux_dlms_cpp.a
+TARGET   = libgurux_dlms_cpp.so
 CC       = g++
 # compiling flags here
 CFLAGS   = -O3 -Wall -fPIC 
