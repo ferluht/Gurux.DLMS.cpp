@@ -37,10 +37,10 @@ CC       = g++
 # compiling flags here
 CFLAGS   = -O3 -Wall -fPIC 
 
-LINKER   = ar rvs
+LINKER   = g++
 
 # linking flags here
-LFLAGS   =  
+LFLAGS   = -shared -o
 
 # change these to set the proper directories where each files shoould be
 
@@ -54,7 +54,7 @@ OBJECTS  := $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 rm       = rm -f
 
 $(LIBDIR)/$(TARGET): $(OBJECTS)
-	@$(LINKER) $@ $(LFLAGS) $(OBJECTS)
+	@$(LINKER) $(LFLAGS) $@ $(OBJECTS)
 	@echo "Linking complete!"
 
 $(OBJECTS): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
